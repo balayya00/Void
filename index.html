@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#04060f" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="NEURO//VOID — a 120-level sci-fi puzzle game about a station, a mind, and the things you are not told. Runs entirely in your browser, works offline, no account needed." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <title>NEURO//VOID — a station keeps thinking about you</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="app" class="app" aria-busy="true">
+      <noscript>
+        <div class="noscript-panel">
+          <h1>NEURO//VOID needs JavaScript</h1>
+          <p>The station is built from live DOM and canvas elements, so it cannot run without JavaScript enabled.</p>
+        </div>
+      </noscript>
+      <div class="boot-screen" id="boot-screen" role="status" aria-live="polite">
+        <div class="boot-mark" aria-hidden="true">//</div>
+        <p class="boot-text">NEURO//VOID</p>
+        <p class="boot-sub">Spinning up the void…</p>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
