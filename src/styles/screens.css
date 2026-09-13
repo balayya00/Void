@@ -1,0 +1,37 @@
+/**
+ * Screen-specific touches (success/failure, story, endings, orientation hint).
+ * Kept separate from layout.css so the shell stays readable.
+ */
+
+.panel-result { border-left: 4px solid var(--cyan); }
+.panel-fail { border-left-color: var(--bad); }
+.panel-badge { border-left-color: var(--gold); }
+.panel-story { border-left: 4px solid var(--violet); }
+.panel-ending { border-left-color: var(--gold); }
+
+.result-stars .star { font-size: 2.2rem; }
+
+/* Orientation hint — only shown for the few puzzles that truly need it. */
+.orientation-hint {
+  display: none;
+  margin-bottom: var(--gap);
+  padding: var(--gap);
+  border: 1px solid var(--warn);
+  border-radius: var(--radius);
+  background: rgba(40, 30, 12, 0.9);
+  color: var(--ink);
+  font-size: var(--text-sm);
+}
+
+@media (orientation: portrait) and (max-width: 480px) {
+  .needs-landscape .orientation-hint { display: block; }
+}
+
+/* Skip link target for keyboard users. */
+#main:focus { outline: none; }
+
+/* Print: the station does not print, but be kind. */
+@media print {
+  .app-header, .toast-host, .btn-row, .hud-buttons { display: none !important; }
+  body { background: #fff; color: #000; }
+}

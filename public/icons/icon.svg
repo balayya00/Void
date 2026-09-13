@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="NEURO//VOID">
+  <defs>
+    <radialGradient id="glow" cx="30%" cy="20%" r="90%">
+      <stop offset="0%" stop-color="#0b1430"/>
+      <stop offset="100%" stop-color="#04060f"/>
+    </radialGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5ce1e6"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#glow)"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#1b2745" stroke-width="10"/>
+  <circle cx="256" cy="256" r="104" fill="none" stroke="url(#signal)" stroke-width="14" stroke-dasharray="46 26"/>
+  <path d="M186 300 L186 212 M186 212 L326 212" stroke="#5ce1e6" stroke-width="26" stroke-linecap="square" fill="none"/>
+  <path d="M326 212 L326 300" stroke="#a78bfa" stroke-width="26" stroke-linecap="square" fill="none"/>
+  <circle cx="256" cy="256" r="20" fill="#ffd479"/>
+</svg>

@@ -1,0 +1,37 @@
+{
+  "name": "neuro-void",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NEURO//VOID — a 120-level sci-fi mind/puzzle game that runs in any modern browser. Vanilla JS + Vite, offline-friendly, mobile-first.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Void Station Collective",
+  "keywords": [
+    "game",
+    "puzzle",
+    "html5",
+    "vanilla-js",
+    "vite",
+    "pwa",
+    "mobile",
+    "offline"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "levels:report": "node scripts/level-report.mjs",
+    "make:icons": "node scripts/make-icons.mjs",
+    "verify": "npm run test && npm run build"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.0.5"
+  }
+}
