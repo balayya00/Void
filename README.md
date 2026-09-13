@@ -43,7 +43,7 @@ No account. No server. No CDN. Everything runs in the browser, works offline aft
 | Audio | Fully synthesised (no audio files): UI, correct/wrong/complete/fail sounds and an ambient bed, with music & SFX toggles |
 | PWA | Web app manifest + service worker: installable, offline-first |
 | Accessibility | 44×44 CSS px targets everywhere, full keyboard play, no hover-only interactions, no colour-only puzzles, reduced motion, high contrast, larger text, screen-reader labels |
-| Tests | **427 automated tests** (`npm test`) covering generation, solvability, save, migration, import/export, scoring, unlocks, endings, achievements and the whole app boot/play loop |
+| Tests | **430 automated tests** (`npm test`) covering generation, solvability, save, migration, import/export, scoring, unlocks, endings, achievements and the whole app boot/play loop |
 
 Every one of the 132 level definitions is generated, validated and solved by the test suite and by `npm run levels:report`, so a level with a missing answer, broken config or impossible state cannot ship.
 
@@ -187,7 +187,7 @@ NEURO-VOID/
 │   ├── ui/                    # Shell, Menu, LevelSelect, Play, Results, Settings, SaveData, Help, Story
 │   ├── styles/                # tokens, base, layout, screens, puzzles
 │   └── utils/                 # dom, rng (seeded), shapes (18 glyphs), grid (BFS/paths)
-└── tests/                     # 427 tests: puzzles, levels, save, scoring, import/export, story, app
+└── tests/                     # 430 tests: puzzles, levels, save, scoring, import/export, story, app
 ```
 
 **How the engine fits together:** a level definition selects a puzzle type, the level number feeds a seeded RNG so a level always generates the same content, the generator produces plain-data params, `validate()` proves the params are solvable, `mount()` renders them with the shared widget kit, `solve()` returns the real click path (used by tests *and* by the assist feature), and the controller scores and saves the result.
@@ -206,7 +206,7 @@ Other scripts:
 ```bash
 npm run build           # production bundle into dist/
 npm run preview         # serve the built bundle for a production-like check
-npm test                # run the full automated suite once (427 tests)
+npm test                # run the full automated suite once (430 tests)
 npm run test:watch      # re-run tests while you work
 npm run levels:report   # validate & price every one of the 132 levels
 npm run verify          # tests + production build (use before shipping)
